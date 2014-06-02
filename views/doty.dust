@@ -7,7 +7,8 @@
 {<content}
 {+calendar/}
 {+observation/}
-{+location/}
+{+temp-details/}
+{+temprange/}
 {+astronomy/}
 {/content}
 
@@ -58,7 +59,7 @@
 	</article>
 	<article class="visibility">
 		<span class="visibility-icon"><img src="{visibilityIconUrl}" alt="visibility"/></span>
-		<span class="visibility-value">{visibility}&deg;{tempUnit}</span>	
+		<span class="visibility-value">{visibility}&deg;{tempUnit}</span>
 	</article>
 	<article class="winddir">
 		<div class="winddir-icon"><img src="{winddirIconUrl}" alt="winddir"/>

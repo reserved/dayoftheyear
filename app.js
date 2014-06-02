@@ -5,6 +5,8 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var cons = require('consolidate');
+
 var stylus = require('stylus');
 var nib = require('nib');
 var jeet = require('jeet');
@@ -14,15 +16,15 @@ var autoprefixer = require('autoprefixer-stylus');
 var flatuicolors = require('stylus-flatuicolors');
 var typeutils = require('stylus-type-utils');
 
-var dust = require('express-dust');
-
-dust.makeBase({
-    appName: 'Day of the Year'
-});
-
 var routes = require('./routes/index');
 
 var app = express();
+
+app.engine('dust', cons.dust);
+
+
+app.set('view engine', 'dust');
+app.set('views', __dirname + '/views');
 
 app.use(favicon());
 app.use(logger('dev'));
