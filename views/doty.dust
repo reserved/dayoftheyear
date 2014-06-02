@@ -34,9 +34,10 @@
 
 {<temp-details}
 <section class="weather-main">
+
 	<article class="temp">
 	<span class="temp-icon">{tempIconUrl}</span>
-	<span class="temp-value">{temp}&deg;{currentUnit}</span>
+	<span class="temp-value">{temp}&deg;{tempUnit}</span>
 	</article>
 	<article class="weather-info">
 	<span class="weather-icon">{weatherIconUrl}</span>
@@ -45,23 +46,50 @@
 
 	<article class="humidity">
 		<span class="humidity-icon"><img src="{humidityIconUrl}" alt="humidity"/></span>
-		<span class="humidity-value">{humidity}&deg;{currentUnit}</span>	
+		<span class="humidity-value">{humidity}&deg;{tempUnit}</span>	
 	</article>
 	<article class="precipitation">
-		<span class="precipitation-icon"><img src="{precipitationIconUrl}" alt="humidity"/></span>
-		<span class="precipitation-value">{precipitation}&deg;{currentUnit}</span>	
+		<span class="precipitation-icon"><img src="{precipitationIconUrl}" alt="precipitation"/></span>
+		<span class="precipitation-value">{precipitation}&deg;{tempUnit}</span>	
 	</article>
 	<article class="pressure">
-		<span class="pressure-icon"><img src="{pressureIconUrl}" alt="humidity"/></span>
-		<span class="pressure-value">{pressure}&deg;{currentUnit}</span>	
+		<span class="pressure-icon"><img src="{pressureIconUrl}" alt="pressure"/></span>
+		<span class="pressure-value">{pressure} Pa</span>	
 	</article>
+	<article class="visibility">
+		<span class="visibility-icon"><img src="{visibilityIconUrl}" alt="visibility"/></span>
+		<span class="visibility-value">{visibility}&deg;{tempUnit}</span>	
+	</article>
+	<article class="winddir">
+		<div class="winddir-icon"><img src="{winddirIconUrl}" alt="winddir"/>
+		<div class="winddir-point {N}">N</div>
+		<div class="winddir-point {NNE}">NNE</div>
+		<div class="winddir-point {NE}">NE</div>
+		<div class="winddir-point {ENE}">ENE</div>
+		<div class="winddir-point {E}">E</div>
+		<div class="winddir-point {ESE}">ESE</div>
+		<div class="winddir-point {SE}">SE</div>
+		<div class="winddir-point {SSE}">SSE</div>
+		<div class="winddir-point {S}">S</div>
+		<div class="winddir-point {SSW}">SSW</div>
+		<div class="winddir-point {SW}">SW</div>
+		<div class="winddir-point {WSW}">WSW</div>
+		<div class="winddir-point {W}">W</div>
+		<div class="winddir-point {WNW}">WNW</div>
+		<div class="winddir-point {NW}">NW</div>
+		<div class="winddir-point {NNW}">NNW</div>
+		</div>
+		<span class="winddir-degree">{winddir}&deg;</span>	
+		<span class="winddir-speed">{winddir}{speedUnit}</span>	
+	</article>
+
 </section>
 {/temp-details}
 
 {<temprange}
 <article class="temp-range">
-	<div class="max-temp">{maxTemp}&deg;{currentUnit}</div>
-	<div class="min-temp">{minTemp}&deg;{currentUnit} </div>
+	<div class="max-temp">{maxTemp}&deg;{tempUnit}</div>
+	<div class="min-temp">{minTemp}&deg;{tempUnit} </div>
 	<span class="unit">{temp}&deg;C</span>
 </article>
 {/temprange}
