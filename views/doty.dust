@@ -1,0 +1,86 @@
+{>base/}
+
+{<links}
+<link rel="stylesheet" href="../css/doty.css">
+{/links}
+
+{<content}
+{+calendar/}
+{+observation/}
+{+location/}
+{+astronomy/}
+{/content}
+
+{<calendar}
+<article class="calendar"></article>
+{/calendar}
+
+{<observation}
+<section class="observation">
+<article class="location">
+	<span class="location-icon">{locationIconUrl}</span>
+	<span class="location-name">{locationName}</span>
+</article>
+<article class="date">
+	<span class="date-icon">{dateIconUrl}</span>
+	<span class="date-value">{date}</span>
+</article>
+<article class="time">
+	<span class="time-icon">{timeIconUrl}</span>
+	<span class="time-value">{time}</span>
+</article>
+</section>
+{/observation}
+
+{<temp-details}
+<section class="weather-main">
+	<article class="temp">
+	<span class="temp-icon">{tempIconUrl}</span>
+	<span class="temp-value">{temp}&deg;{currentUnit}</span>
+	</article>
+	<article class="weather-info">
+	<span class="weather-icon">{weatherIconUrl}</span>
+	<span class="weather-desc">{weatherDesc}</span>
+	</article>
+
+	<article class="humidity">
+		<span class="humidity-icon"><img src="{humidityIconUrl}" alt="humidity"/></span>
+		<span class="humidity-value">{humidity}&deg;{currentUnit}</span>	
+	</article>
+	<article class="precipitation">
+		<span class="precipitation-icon"><img src="{precipitationIconUrl}" alt="humidity"/></span>
+		<span class="precipitation-value">{precipitation}&deg;{currentUnit}</span>	
+	</article>
+	<article class="pressure">
+		<span class="pressure-icon"><img src="{pressureIconUrl}" alt="humidity"/></span>
+		<span class="pressure-value">{pressure}&deg;{currentUnit}</span>	
+	</article>
+</section>
+{/temp-details}
+
+{<temprange}
+<article class="temp-range">
+	<div class="max-temp">{maxTemp}&deg;{currentUnit}</div>
+	<div class="min-temp">{minTemp}&deg;{currentUnit} </div>
+	<span class="unit">{temp}&deg;C</span>
+</article>
+{/temprange}
+
+{<astronomy}
+<section class="astronomy">
+	<article class="moon">
+		<span class="moon-icon"></span>
+		<span class="moon-info">
+			<div class="moonrise-time"></div>
+			<div class="moonset-time"></div>
+		</span>
+	</article>
+	<article class="sun">
+		<span class="sun-icon"></span>
+		<span class="sun-info">
+			<div class="sunrise-time"></div>
+			<div class="sunset-time"></div>
+		</span>
+	</article>
+</section>
+{/astronomy}

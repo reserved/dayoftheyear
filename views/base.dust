@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{+links/}
+	{+domscripts/}
+	<title>{title}</title>
+</head>
+<body>
+{+content/}
+{+scripts/}
+</body>
+</html>
